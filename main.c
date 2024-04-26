@@ -149,6 +149,75 @@ int main() {
         printf("Test\n");
         i++;
     }
-    printf("%p", &myAge); // Outputs 0x7ffe5367e044
+    printf("%p", &myAge); // Outputs 0x7ffe5367e044 (Hex Code)
+
+    // For Loops:
+
+    // for (expression 1; expression 2; expression 3) {
+    // // code block to be executed
+    // }
+
+    // Expression 1 is executed (one time) before the execution of the code block.
+
+    // Expression 2 defines the condition for executing the code block.
+
+    // Expression 3 is executed (every time) after the code block has been executed.
+
+    // The example below will print the numbers 0 to 4:
+    int o;
+
+    for (o = 0; o < 5; o++) {
+        printf("%d\n", o);
+    }
+
+    // In this examlpe, we create a program that only print even values between 0 and 10:
+
+    for (o = 0; o <= 10; o = o + 2) {
+        printf("\n Even value: %d", o);
+    }
+
+    // Break and Continue (can also be used with While loops):
+    // The BREAK statement can also be used to jump out of a loop.
+    // The CONTINUE statement breaks one iteration (in the loop),
+    // if a specified condition occurs, and continues with the next iteration in the loop.
+
+    // This example skips the value of 4:
+    int iContinue;
+    printf("\n\nSkipping the 4th element:\n");
+    for (iContinue = 0; iContinue < 10; iContinue++) {
+        if (iContinue == 4) {
+            continue;
+        }
+        printf("%d\n - ", iContinue); 
+    }
+    
+    // Arrays:
+    printf("\n\nArrays:\n");
+    int myNumbers[] = {25, 50, 75, 100};
+    printf("\n Old value of first element: %d", myNumbers[0]);
+    myNumbers[0] = 33;
+    printf("\n New value of first element: %d\n", myNumbers[0]);
+
+    // Size or Length of an Array:
+    // To get the size of an array, you can use the sizeof operator.
+    // However since sizeof operator returns the size of a type in bytes,
+    // it will not give correct answer
+    // But when you just want to find out how many elements an array has,
+    // you can use the following formula (which divides the size of the array by the size of one array element):
+    int myNums[] = {10, 25, 50, 75, 100};
+    int length = sizeof(myNums) / sizeof(myNums[0]);
+
+    printf("/n%d", length);  // Prints 5
+
+    // Loopingg through elements of array:
+    int lengthX = sizeof(myNumbers) / sizeof(myNumbers[0]);
+    int ix;
+
+    for (ix = 0; ix < lengthX; ix++) {
+    printf("%d\n", myNumbers[ix]);
+    }
+
+
+
    return 0;
 }
